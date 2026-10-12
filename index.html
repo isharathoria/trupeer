@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reducing Churn at Trupeer</title>
-<meta name="description" content="Founding Product Manager assignment: executive summary of how I would diagnose and reduce churn at Trupeer.">
+<meta name="description" content="Founding Product Manager assignment: how I would diagnose and reduce churn at Trupeer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Stack+Sans+Headline:wght@400;500;600&family=Stack+Sans+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,7 +33,6 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .pill{display:inline-block;font-family:var(--head);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);background:var(--yellow-soft);padding:6px 12px;border-radius:999px}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,7vw,64px);line-height:1.05;letter-spacing:-.01em;margin:20px auto 16px;max-width:800px}
 .lede{font-family:var(--head);font-size:19px;color:var(--ink-60);max-width:640px;margin:0 auto}
-.meta{font-family:var(--head);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40);margin-top:18px}
 .eyebrow{font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);margin-bottom:10px}
 h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4.2vw,40px);line-height:1.1;margin:0 0 14px}
 h3{font-family:var(--head);font-weight:600;font-size:18px;margin:24px 0 8px}
@@ -96,14 +95,12 @@ th{font-family:var(--head);font-weight:600;text-align:left;font-size:12px;letter
 td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:0}
 .tag{display:inline-block;font-family:var(--head);font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
-.t1{background:var(--yellow)}.t2{background:var(--yellow-soft)}.t3{background:#F6E1DA}.tq{background:#ECE7EC}.tw{border:1px solid var(--line)}
+.t1{background:var(--yellow)}.t2{background:var(--yellow-soft)}.t3{background:#F6E1DA}.tq{background:#ECE7EC}
 .exp{border-top:1px dashed var(--line);margin-top:10px;padding-top:10px;font-size:14.5px;color:var(--ink-60)}
 .note{background:var(--yellow-soft);border-radius:12px;padding:14px 18px;font-size:15px;margin-top:16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
 .chip{font-family:var(--head);font-size:13.5px;background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
-
-footer{border-top:1px solid var(--line);padding:32px 0 48px;margin-top:44px;font-size:14px;color:var(--ink-60)}
-footer ul{padding-left:18px}
+.end{height:64px}
 @media (max-width:760px){
   .grid2,.grid3,.toc ol{grid-template-columns:1fr}
   .exec{padding:22px}
@@ -130,56 +127,49 @@ footer ul{padding-left:18px}
 <header class="hero wrap" id="top">
   <span class="pill">Founding PM assignment</span>
   <h1>Reducing churn at Trupeer</h1>
-  <p class="lede">An executive summary of how I'd diagnose why customers leave, and what I'd build, test and measure in my first 90 days.</p>
-  <div class="meta">Isha · October 2026</div>
+  <p class="lede">How I'd find out why customers leave, and what I'd test and build in my first 90 days.</p>
 </header>
 
 <main class="wrap">
 
 <section class="exec" id="summary">
   <div class="eyebrow">Executive summary</div>
-  <p class="answer">Churn at Trupeer is most likely an activation and habit problem: customers get a great first video, then have no reason to come back next week.</p>
+  <p class="answer">Churn at Trupeer is most likely a repeat-usage problem: customers make one or two videos, get value, and then have no regular reason to come back.</p>
 
   <div class="grid2">
     <div class="box why">
-      <div class="k">Why not a feature gap?</div>
+      <div class="k">Why not a missing feature?</div>
       <ul>
-        <li><b>The feature set already leads the category:</b> AI voiceover, avatars, auto-zooms, 65+ languages, docs and a knowledge base. Competitors with fewer AI features, like Loom and Scribe, still keep customers.</li>
-        <li><b>The first experience already works:</b> #1 on Product Hunt and strong early reviews. People get the "wow"; what's missing is the second and tenth use.</li>
-        <li><b>A feature gap shows up in specific cancel reasons</b> ("needed X"). One-off use shows up as accounts going quiet after 1–2 videos. I expect the second pattern, and the diagnosis tests both.</li>
+        <li><b>Features are already strong.</b> Trupeer matches or beats competitors on AI voiceover, avatars, translation and auto-generated guides. Simpler tools like Loom and Scribe keep customers without these.</li>
+        <li><b>New users like the first result.</b> #1 on Product Hunt and good early reviews. The drop comes after the first use, not before it.</li>
+        <li><b>A missing feature would show up in cancellation reasons.</b> I'd check this in week 1. If it does, the plan changes.</li>
       </ul>
     </div>
     <div class="box">
-      <div class="k">What I'd fix, in order</div>
-      <div class="rank"><span class="n">1</span><p><b>One-off use.</b> Customers make a demo or launch video, then stop.</p></div>
-      <div class="rank"><span class="n">2</span><p><b>Invisible ROI.</b> One person creates; the buyer never sees the value.</p></div>
-      <div class="rank"><span class="n">3</span><p><b>AI rework.</b> "Seconds" turns into an hour of editing.</p></div>
-      <p class="muted" style="font-size:14px;margin-top:8px">In parallel: recover failed payments and add pause and downgrade options to cancellation.</p>
+      <div class="k">What I'd fix first</div>
+      <div class="rank"><span class="n">1</span><p><b>One-time use.</b> Customers create for a single launch or demo, then stop.</p></div>
+      <div class="rank"><span class="n">2</span><p><b>Buyer doesn't see the value.</b> One person uses it; the budget owner can't see the impact at renewal.</p></div>
+      <div class="rank"><span class="n">3</span><p><b>Too much editing.</b> AI output needs fixing, so a video takes far longer than promised.</p></div>
+      <p class="muted" style="font-size:14px;margin-top:8px">In parallel: recover failed payments and offer pause or downgrade before someone cancels.</p>
     </div>
-  </div>
-
-  <div class="grid3 row">
-    <div class="box"><div class="k">Diagnose</div><p>Define four churn metrics, track the creation funnel, and interview 30 churned and 15 retained customers in weeks 1–3.</p></div>
-    <div class="box"><div class="k">Solve</div><p>Content that stays up to date as products change, ROI digests for buyers, team workflows, guided first videos, and fairer packaging.</p></div>
-    <div class="box"><div class="k">Prove</div><p>Every fix starts as a cheap experiment with a control group. I'd build only what moves retention.</p></div>
   </div>
 
   <div class="grid2 row">
     <div class="ns">
       <div class="k">North-star metric</div>
-      <h4>Weekly active workspaces whose content was viewed</h4>
-      <p>It captures the creation habit and the value delivered to viewers, which is what the buyer pays for.</p>
+      <h4>Weekly active accounts whose videos get watched</h4>
+      <p>It shows both that customers keep creating and that their audience uses the content, which is what the buyer pays for.</p>
     </div>
     <div class="box">
-      <div class="k">Goal (set after the baseline)</div>
-      <p>Cut self-serve monthly logo churn by <b>25–30%</b> (relative) and push enterprise net revenue retention above <b>110%</b> within two quarters.</p>
+      <div class="k">Goal</div>
+      <p>Cut monthly customer churn by <b>25–30%</b> and grow net revenue retention above <b>110%</b> within two quarters. Final targets get set once we know the baseline.</p>
     </div>
   </div>
 
   <div class="grid3 row">
-    <div class="phase"><div class="d">Days 1–30</div><div class="s">Diagnose</div><p>Baseline, tracking, interviews, payment recovery.</p></div>
-    <div class="phase"><div class="d">Days 31–60</div><div class="s">Test</div><p>Guided onboarding, ROI digest, cancel-flow saves.</p></div>
-    <div class="phase"><div class="d">Days 61–90</div><div class="s">Scale</div><p>Build what moved retention; health score live.</p></div>
+    <div class="phase"><div class="d">Days 1–30</div><div class="s">Find the cause</div><p>Data, customer interviews, failed-payment fixes.</p></div>
+    <div class="phase"><div class="d">Days 31–60</div><div class="s">Test fixes</div><p>Small experiments against a control group.</p></div>
+    <div class="phase"><div class="d">Days 61–90</div><div class="s">Build what worked</div><p>Ship only what improved retention.</p></div>
   </div>
 </section>
 
@@ -187,16 +177,13 @@ footer ul{padding-left:18px}
   <div class="eyebrow">Contents</div>
   <h2>The full plan</h2>
   <ol>
-    <li><a href="#s1"><span>What "churn" means here<small>Four metrics and my assumptions</small></span></a></li>
-    <li><a href="#s2"><span>How I'd diagnose it<small>Numbers, conversations, tracking</small></span></a></li>
-    <li><a href="#s3"><span>Why customers might be leaving<small>11 hypotheses in four groups</small></span></a></li>
-    <li><a href="#s4"><span>What I'd tackle first<small>Ranking and quick wins</small></span></a></li>
-    <li><a href="#s5"><span>How I'd solve it<small>Four fixes, each with an experiment</small></span></a></li>
-    <li><a href="#s6"><span>How I'd measure success<small>North star, inputs, health score</small></span></a></li>
-    <li><a href="#s7"><span>30-60-90 day plan<small>Diagnose, test, scale</small></span></a></li>
-    <li><a href="#s8"><span>Risks and trade-offs<small>And what I wouldn't do</small></span></a></li>
-    <li><a href="#s9"><span>One-page summary<small>Cause, evidence, fix, metric</small></span></a></li>
-    <li><a href="#s10"><span>Questions for the founders<small>What I'd ask on day one</small></span></a></li>
+    <li><a href="#s1"><span>Defining churn<small>What I'd measure, and how I'd split it</small></span></a></li>
+    <li><a href="#s2"><span>Finding the cause<small>Data and customer conversations</small></span></a></li>
+    <li><a href="#s3"><span>Why customers leave<small>11 possible reasons and how to spot each</small></span></a></li>
+    <li><a href="#s4"><span>What I'd do about it<small>Four fixes, in priority order, each with a test</small></span></a></li>
+    <li><a href="#s5"><span>Measuring success<small>North star, supporting metrics, warning signs</small></span></a></li>
+    <li><a href="#s6"><span>90-day plan and risks<small>Milestones, trade-offs, what I'd avoid</small></span></a></li>
+    <li><a href="#s7"><span>Questions for the founders<small>What I'd ask on day one</small></span></a></li>
   </ol>
 </section>
 
@@ -206,233 +193,180 @@ footer ul{padding-left:18px}
 </div>
 
 <details class="sec" id="s1">
-  <summary><span class="num">01</span><span class="t">What "churn" means here<small>Four separate numbers, because each has a different cause, owner and fix.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">01</span><span class="t">Defining churn<small>Four numbers, because each has a different cause and a different fix.</small></span><span class="chev"></span></summary>
   <div class="body">
     <div class="tablewrap"><table>
-      <thead><tr><th>Metric</th><th>Definition</th><th>Why it matters at Trupeer</th></tr></thead>
+      <thead><tr><th>Metric</th><th>What it measures</th><th>Why it matters</th></tr></thead>
       <tbody>
-        <tr><td><b>Self-serve logo churn</b></td><td>% of paying workspaces that cancel in a month</td><td>Health of the product-led motion; most logos sit here</td></tr>
-        <tr><td><b>Gross revenue churn</b></td><td>MRR lost to cancels and downgrades</td><td>Scale-to-Pro downgrades and seat cuts hide inside "retained" logos</td></tr>
-        <tr><td><b>Net revenue retention</b></td><td>Enterprise cohort revenue after 12 months, including expansion</td><td>The number investors judge a B2B company on</td></tr>
-        <tr><td><b>Involuntary churn</b></td><td>Cancels caused by failed payments never recovered</td><td>Cheapest churn to fix; common with monthly card billing</td></tr>
+        <tr><td><b>Customer churn</b></td><td>% of paying self-serve customers who cancel each month</td><td>Tells us whether the product keeps people on its own</td></tr>
+        <tr><td><b>Revenue churn</b></td><td>Revenue lost each month to cancellations and downgrades</td><td>A customer can stay but pay less; this catches it</td></tr>
+        <tr><td><b>Net revenue retention</b></td><td>Revenue from existing enterprise customers after 12 months, including upgrades</td><td>Shows whether big accounts grow or shrink</td></tr>
+        <tr><td><b>Failed-payment churn</b></td><td>Customers lost because a card payment failed</td><td>Not a real decision to leave, and the easiest to fix</td></tr>
       </tbody>
     </table></div>
-    <p style="margin-top:16px">I'd also watch <b>pre-activation drop-off</b>: users who never ship a second piece of content. It isn't churn yet, but it predicts it.</p>
-    <h3>Assumptions, since no data was shared</h3>
-    <ul>
-      <li>Public pricing: 10-day trial, Pro at $49/month (20 AI video minutes), Scale at $249/month (100 minutes, 3 editors), custom Enterprise. Minutes reset monthly.</li>
-      <li>Most logos are self-serve monthly; most revenue is Scale and Enterprise.</li>
-      <li>Every metric is cut by plan, billing cycle, use case, acquisition channel and tenure.</li>
-      <li>Order of attack: revenue churn first, activation-driven logo churn second, involuntary churn in parallel.</li>
-    </ul>
+    <p style="margin-top:16px"><b>Early warning:</b> new users who never make a second video. They haven't cancelled yet, but most will.</p>
+    <p><b>How I'd split every number:</b> by plan, monthly vs annual billing, use case (sales demos, help guides, training), signup source, and how long they've been a customer.</p>
+    <p><b>Where I'd start:</b> revenue churn in larger accounts first (most money at risk), then self-serve customer churn (most customers), with failed payments fixed in parallel.</p>
   </div>
 </details>
 
 <details class="sec" id="s2">
-  <summary><span class="num">02</span><span class="t">How I'd diagnose it<small>Three weeks, starting with data that already exists.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">02</span><span class="t">Finding the cause<small>Three weeks, starting with data that already exists.</small></span><span class="chev"></span></summary>
   <div class="body">
-    <h3>Quantitative</h3>
+    <h3>From the data</h3>
     <ol>
-      <li><b>Cohort retention curves</b> by signup month, plan, channel and use case. A flattening curve means a healthy core; a falling one means no lasting job.</li>
-      <li><b>Creation funnel:</b> install → first recording → first export/share → 2nd piece within 14 days → teammate invited → content viewed → creating weekly.</li>
-      <li><b>Retention correlates:</b> first-14-day behaviours that separate retained from churned accounts (3+ pieces, brand kit, translation, embeds, 2+ editors).</li>
-      <li><b>Usage before cancel:</b> AI minutes vs limit, edit time per video, regenerations, export failures.</li>
-      <li><b>Revenue view:</b> downgrades, seat contraction, failed payments and recovery rate.</li>
+      <li><b>Retention by signup month,</b> split by plan, source and use case. Does usage level off (a loyal core) or keep falling?</li>
+      <li><b>Where users drop off:</b> install → first recording → first video shared → second video within 14 days → teammate invited → video watched by others → creating every week.</li>
+      <li><b>What loyal customers did early:</b> actions in the first two weeks that customers who stayed took and those who left didn't. For example 3+ videos, brand setup, translation, embedding, or a second user.</li>
+      <li><b>Behaviour before cancelling:</b> plan usage, editing time per video, failed exports.</li>
+      <li><b>Revenue:</b> downgrades, fewer seats, failed payments and how many get recovered.</li>
     </ol>
-    <h3>Qualitative</h3>
+    <h3>From customers</h3>
     <ul>
-      <li>30 churned and 15 retained customer interviews, self-serve and enterprise.</li>
-      <li>Cancel-flow reason codes plus free text; support tickets by theme; G2 and Product Hunt reviews; lost-renewal notes.</li>
-      <li>20 session recordings of first-time users.</li>
-      <li>5 conversations with <b>viewers</b> of Trupeer content. If nobody watches the output, the buyer won't renew.</li>
+      <li>Interviews with 30 customers who left and 15 who stayed, both self-serve and enterprise.</li>
+      <li>Cancellation reasons, support tickets and public reviews (G2, Product Hunt).</li>
+      <li>Watch 20 new users' first sessions.</li>
+      <li>Talk to 5 people who <b>watch</b> customers' videos. If nobody watches, the buyer won't renew.</li>
     </ul>
-    <div class="note"><b>If tracking is thin:</b> ship week-1 events (recording, generation, edit time, share/embed, invite, view, limit hit, cancel reason), pull billing and CRM data, and start a weekly 30-minute churn review with the founders and CS.</div>
+    <div class="note"><b>If the data isn't there:</b> add basic tracking in week 1 (recordings, edits, shares, invites, views, cancellation reasons). Pull billing and CRM data, and hold a weekly 30-minute churn review with the founders and customer success.</div>
   </div>
 </details>
 
 <details class="sec" id="s3">
-  <summary><span class="num">03</span><span class="t">Why customers might be leaving<small>Never got value, value didn't recur, value stayed with one person, or commercial reasons.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">03</span><span class="t">Why customers leave<small>Possible reasons, who they affect, and how we'd know.</small></span><span class="chev"></span></summary>
   <div class="body">
     <div class="tablewrap"><table>
-      <thead><tr><th>Group</th><th>Hypothesis</th><th>Most affected</th><th>Signal that confirms it</th></tr></thead>
+      <thead><tr><th>Type</th><th>Reason</th><th>Who it affects</th><th>How we'd spot it</th></tr></thead>
       <tbody>
-        <tr><td><span class="tag t3">Never got value</span></td><td>Setup and first-recording friction</td><td>New self-serve users</td><td>Big drop between install and first export</td></tr>
-        <tr><td><span class="tag t3">Never got value</span></td><td>AI output needs heavy rework</td><td>All</td><td>Long edit sessions, many regenerations, "quality" cancel reasons</td></tr>
-        <tr><td><span class="tag t1">Didn't recur</span></td><td>Episodic need: one launch or demo, then nothing</td><td>Founders, marketers</td><td>1–2 pieces, then idle; churn at month 2</td></tr>
-        <tr><td><span class="tag t1">Didn't recur</span></td><td>Content goes stale when the product UI changes</td><td>Product, support, L&amp;D</td><td>Re-recording spikes after releases</td></tr>
-        <tr><td><span class="tag t2">One person</span></td><td>Single creator, no team workflow</td><td>Scale, Enterprise</td><td>1 active editor out of 3 seats</td></tr>
-        <tr><td><span class="tag t2">One person</span></td><td>Buyer never sees ROI</td><td>Enterprise, L&amp;D, CS</td><td>Lost renewals citing "couldn't justify"</td></tr>
-        <tr><td><span class="tag t2">One person</span></td><td>Content isn't where it's consumed (help centre, LMS, in-app)</td><td>Support, L&amp;D</td><td>Low embed rate; downloads instead of links</td></tr>
-        <tr><td><span class="tag tq">Commercial</span></td><td>Minute caps don't fit usage</td><td>Pro, Scale</td><td>Churn after limit hits or low minute use</td></tr>
-        <tr><td><span class="tag tq">Commercial</span></td><td>Failed payments</td><td>Monthly self-serve</td><td>Billing failures with no recovery</td></tr>
-        <tr><td><span class="tag tq">Commercial</span></td><td>Wrong-fit acquisition</td><td>Self-serve</td><td>Some channel cohorts churn far faster</td></tr>
-        <tr><td><span class="tag tq">Commercial</span></td><td>Switching to bundled or cheaper tools</td><td>All</td><td>Cancel reasons naming a competitor</td></tr>
+        <tr><td><span class="tag t3">Didn't get started</span></td><td>Setup or first recording is hard</td><td>New self-serve users</td><td>Many sign up but never share a video</td></tr>
+        <tr><td><span class="tag t3">Didn't get started</span></td><td>AI output needs too much fixing</td><td>Everyone</td><td>Long editing time; "quality" given as the cancel reason</td></tr>
+        <tr><td><span class="tag t1">Used it once</span></td><td>Only needed one video (a launch or demo)</td><td>Founders, marketers</td><td>1–2 videos, then nothing; cancel in month 2</td></tr>
+        <tr><td><span class="tag t1">Used it once</span></td><td>Videos go out of date when their product changes</td><td>Product, support, training teams</td><td>Re-recording after releases; requests about updating videos</td></tr>
+        <tr><td><span class="tag t2">One-person account</span></td><td>Only one person on the team uses it</td><td>Team and enterprise plans</td><td>1 active user on a multi-seat plan</td></tr>
+        <tr><td><span class="tag t2">One-person account</span></td><td>The buyer can't see the impact</td><td>Enterprise, training, support</td><td>Lost renewals: "couldn't justify the cost"</td></tr>
+        <tr><td><span class="tag t2">One-person account</span></td><td>Videos aren't where people look (help centre, learning platform, in-app)</td><td>Support, training</td><td>Videos downloaded instead of shared or embedded</td></tr>
+        <tr><td><span class="tag tq">Pricing and fit</span></td><td>Plan limits don't match how often they create</td><td>Paid plans</td><td>Cancel after hitting limits, or after months of low use</td></tr>
+        <tr><td><span class="tag tq">Pricing and fit</span></td><td>Card payment failed</td><td>Monthly plans</td><td>Failed payments never recovered</td></tr>
+        <tr><td><span class="tag tq">Pricing and fit</span></td><td>Wrong customers signing up</td><td>Self-serve</td><td>Some signup sources cancel much faster</td></tr>
+        <tr><td><span class="tag tq">Pricing and fit</span></td><td>Cheaper or bundled alternatives</td><td>Everyone</td><td>Cancel reasons naming a competitor</td></tr>
       </tbody>
     </table></div>
-    <p class="muted" style="margin-top:14px;font-size:14.5px">A missing feature would show up here as specific cancel reasons ("needed desktop recording", "no SSO"). If that's the dominant signal, it moves up the ranking.</p>
+    <p class="muted" style="margin-top:14px;font-size:14.5px">If cancellation reasons mostly name a missing feature, that moves to the top of the list.</p>
   </div>
 </details>
 
 <details class="sec" id="s4">
-  <summary><span class="num">04</span><span class="t">What I'd tackle first<small>Ranked by evidence, revenue at risk and effort.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">04</span><span class="t">What I'd do about it<small>Ranked by revenue at risk, strength of evidence and effort. Each fix starts as a small test.</small></span><span class="chev"></span></summary>
   <div class="body">
-    <ol>
-      <li><b>Episodic use.</b> Probably the biggest driver of logo churn. Fixing it builds a moat: a library of living content is hard to leave.</li>
-      <li><b>Buyer can't see ROI; accounts stay single-player.</b> Where revenue churn lives, in Scale and Enterprise renewals.</li>
-      <li><b>AI output needs rework.</b> Breaks the core promise of a finished video in seconds.</li>
-    </ol>
-    <div class="note"><b>In parallel:</b> payment-failure recovery, pause and downgrade in the cancel flow, annual-plan nudges. <b>Not now:</b> more avatars and voices, or chasing users who were never a fit. If churn is concentrated in one channel, wrong-fit acquisition jumps to the top.</div>
+    <div class="grid2">
+      <div class="box">
+        <div class="k">Priority 1 · One-time use</div>
+        <h4>Give customers a reason to come back</h4>
+        <ul>
+          <li>Update one step of a video when the product changes, instead of re-recording it.</li>
+          <li>Templates for recurring work: release updates, onboarding series, process guides.</li>
+          <li>One shared library where all videos and guides live.</li>
+        </ul>
+        <div class="exp"><b>Test:</b> manually update videos for 50 accounts, compare 60-day retention with a control group.</div>
+      </div>
+      <div class="box">
+        <div class="k">Priority 2 · Buyer doesn't see the value</div>
+        <h4>Show the impact and bring in the team</h4>
+        <ul>
+          <li><b>Monthly impact report</b> to the account owner: views, completion rates, top videos, support tickets avoided.</li>
+          <li>Prompt to invite teammates when sharing a video; add comments and approvals.</li>
+          <li>Enterprise: account health tracking and quarterly business reviews.</li>
+        </ul>
+        <div class="exp"><b>Test:</b> send the report to half of team accounts, compare renewals and seat growth.</div>
+      </div>
+      <div class="box">
+        <div class="k">Priority 3 · Too much editing</div>
+        <h4>Get to a good first video faster</h4>
+        <ul>
+          <li>Guided first video by use case, with a short checklist before recording.</li>
+          <li>Quick rating on voiceover, script and guide steps; fix the most common problems first.</li>
+        </ul>
+        <div class="exp"><b>Test:</b> A/B test guided onboarding; measure second video within 14 days and editing time.</div>
+      </div>
+      <div class="box">
+        <div class="k">Quick wins · Billing and cancellation</div>
+        <h4>Stop avoidable losses</h4>
+        <ul>
+          <li>Retry failed payments, update expired cards, send reminders.</li>
+          <li>At cancellation, ask why, then offer a pause, a downgrade or extra credits.</li>
+          <li>Test plan limits that match how often people actually create.</li>
+        </ul>
+        <div class="exp"><b>Test:</b> add a pause option; measure how many stay and how many return within 90 days.</div>
+      </div>
+    </div>
+    <div class="note"><b>Not now:</b> more avatars or voices. They make the first video nicer but don't bring anyone back for the second.</div>
   </div>
 </details>
 
 <details class="sec" id="s5">
-  <summary><span class="num">05</span><span class="t">How I'd solve it<small>Each fix tied to a root cause, each starting as a cheap experiment.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">05</span><span class="t">Measuring success<small>One north star, a few supporting metrics, and warning signs.</small></span><span class="chev"></span></summary>
   <div class="body">
+    <p><b>North star:</b> weekly active accounts whose videos get watched, meaning they published at least one video that week and someone viewed it.</p>
+    <h3>Supporting metrics</h3>
+    <div class="chips">
+      <span class="chip">Second video within 14 days</span><span class="chip">Weeks per month with a new video</span><span class="chip">Active users per account</span><span class="chip">% of videos shared or embedded</span><span class="chip">Views per video</span><span class="chip">Editing time per video</span><span class="chip">Plan usage</span>
+    </div>
     <div class="grid2">
       <div class="box">
-        <div class="k">A · One-off use</div>
-        <h4>Make Trupeer where product knowledge lives</h4>
+        <div class="k">Early warning signs</div>
         <ul>
-          <li>Re-record one step when a UI changes; regenerate the video and guide.</li>
-          <li>Recurring templates: release updates, onboarding series, SOP libraries.</li>
-          <li>Knowledge hub as the default destination.</li>
+          <li>No new video for 3+ weeks</li><li>Fewer active users or fewer views</li><li>Hit the plan limit, or barely using it</li><li>Failed payment or unhappy support tickets</li><li>Main contact left the company (enterprise)</li>
         </ul>
-        <div class="exp"><b>Test:</b> concierge step updates for 50 accounts vs control; 60-day retention.</div>
+        <div class="exp">Early signs trigger an in-app nudge; serious ones trigger a call from customer success.</div>
       </div>
       <div class="box">
-        <div class="k">B · Invisible ROI</div>
-        <h4>Make value visible and shared</h4>
+        <div class="k">Guardrails and targets</div>
         <ul>
-          <li>Viewer analytics and a monthly ROI digest for admin and buyer.</li>
-          <li>Invite at the moment of sharing; comments, approvals, shared brand kits.</li>
-          <li>Enterprise health score and quarterly reviews.</li>
+          <li><b>Guardrails:</b> cost per account, support load, customer satisfaction, and "saved" customers who still leave within 90 days.</li>
+          <li><b>Day 30:</b> baseline and tracking in place.</li>
+          <li><b>Day 60:</b> 10 points more new users making a second video.</li>
+          <li><b>Day 90:</b> customer churn down 25–30%; over half of failed payments recovered.</li>
         </ul>
-        <div class="exp"><b>Test:</b> ROI digest to half of Scale accounts; renewal and seat expansion.</div>
-      </div>
-      <div class="box">
-        <div class="k">C · AI rework</div>
-        <h4>Shorten time to a first good video</h4>
-        <ul>
-          <li>Guided first video by use case, with a pre-recording checklist.</li>
-          <li>Thumbs up/down on voiceover, script and doc steps; fix the top failure modes.</li>
-        </ul>
-        <div class="exp"><b>Test:</b> A/B guided onboarding; 2nd piece within 14 days, median edit time.</div>
-      </div>
-      <div class="box">
-        <div class="k">D · Commercial</div>
-        <h4>Stop avoidable losses</h4>
-        <ul>
-          <li>Smart retries, card updater, payment reminders.</li>
-          <li>Cancel flow: capture the reason, offer pause, downgrade or a minute top-up.</li>
-          <li>Test flexible minutes and an occasional-creator seat.</li>
-        </ul>
-        <div class="exp"><b>Test:</b> pause option in the cancel flow; save rate and 90-day reactivation.</div>
       </div>
     </div>
   </div>
 </details>
 
 <details class="sec" id="s6">
-  <summary><span class="num">06</span><span class="t">How I'd measure success<small>One north star, seven inputs, a health score and guardrails.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">06</span><span class="t">90-day plan and risks<small>Evidence first, then small tests, then build what worked.</small></span><span class="chev"></span></summary>
   <div class="body">
-    <p><b>North star:</b> weekly active workspaces whose content was viewed (published at least one piece in the week and had at least one viewer).</p>
-    <h3>Input metrics</h3>
-    <div class="chips">
-      <span class="chip">2nd piece within 14 days</span><span class="chip">Weeks with creation / month</span><span class="chip">Active editors per workspace</span><span class="chip">% content embedded or shared</span><span class="chip">Views per piece</span><span class="chip">Median edit time</span><span class="chip">AI-minute utilisation</span>
+    <div class="grid3">
+      <div class="phase"><div class="d">Days 1–30</div><div class="s">Find the cause</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Agree churn definitions</li><li>Add tracking</li><li>45 customer interviews</li><li>Fix failed payments</li></ul><p style="margin-top:10px"><b>Milestone:</b> top 3 causes agreed</p></div>
+      <div class="phase"><div class="d">Days 31–60</div><div class="s">Test fixes</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Guided first video</li><li>Monthly impact report</li><li>Pause and downgrade offers</li><li>Manual video updates</li></ul><p style="margin-top:10px"><b>Milestone:</b> test results reviewed</p></div>
+      <div class="phase"><div class="d">Days 61–90</div><div class="s">Build what worked</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Ship the winning fixes</li><li>Early-warning alerts live</li><li>Test new plan limits</li><li>Enterprise review process</li></ul><p style="margin-top:10px"><b>Target:</b> churn down 25–30%</p></div>
     </div>
-    <div class="grid2">
-      <div class="box">
-        <div class="k">Account health score</div>
-        <ul>
-          <li>No creation for 21+ days</li><li>Active editors or views falling</li><li>Plan limit hit, or minutes barely used</li><li>Payment failure; negative support sentiment</li><li>Champion left (Enterprise)</li>
-        </ul>
-        <div class="exp">Amber triggers an in-app nudge; red triggers a CS call.</div>
-      </div>
-      <div class="box">
-        <div class="k">Guardrails and targets</div>
-        <ul>
-          <li>Guardrails: AI cost and margin per account, support load, CSAT, "saved" accounts that churn within 90 days anyway.</li>
-          <li>Day 30: baseline and tracking live.</li>
-          <li>Day 60: activation up 10 points.</li>
-          <li>Day 90: self-serve logo churn down 25–30%; over half of failed payments recovered.</li>
-        </ul>
-      </div>
-    </div>
+    <h3>Risks and trade-offs</h3>
+    <ul>
+      <li><b>Keeping the wrong customers:</b> if one signup source drives most churn, the fix is marketing, not product.</li>
+      <li><b>Discounts that only delay churn:</b> track whether "saved" customers leave within 90 days.</li>
+      <li><b>Video updates are hard to build:</b> do them manually first; build only if retention improves.</li>
+      <li><b>Small numbers can mislead:</b> back every data point with customer conversations.</li>
+      <li><b>Flexible limits cost money:</b> check AI costs before changing plans.</li>
+    </ul>
+    <div class="note"><b>What I wouldn't do:</b> add more avatars or voices to fix churn, force unhappy customers into annual contracts, or hide the cancel button.</div>
   </div>
 </details>
 
 <details class="sec" id="s7">
-  <summary><span class="num">07</span><span class="t">30-60-90 day plan<small>Evidence first, then cheap experiments, then build what worked.</small></span><span class="chev"></span></summary>
-  <div class="body">
-    <div class="grid3">
-      <div class="phase"><div class="d">Days 1–30</div><div class="s">Diagnose</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Define churn by segment</li><li>Ship tracking events</li><li>45 customer interviews</li><li>Payment recovery live</li></ul><p style="margin-top:10px"><b>Gate:</b> top 3 causes agreed</p></div>
-      <div class="phase"><div class="d">Days 31–60</div><div class="s">Test</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Guided first-video A/B</li><li>ROI digest to half of Scale</li><li>Cancel-flow save offers</li><li>Concierge step updates</li></ul><p style="margin-top:10px"><b>Gate:</b> experiments read out</p></div>
-      <div class="phase"><div class="d">Days 61–90</div><div class="s">Scale</div><ul style="font-size:14.5px;padding-left:18px;margin:0"><li>Build what moved retention</li><li>Health score live</li><li>Packaging test on minutes</li><li>Enterprise review playbook</li></ul><p style="margin-top:10px"><b>Target:</b> churn down 25–30%</p></div>
-    </div>
-    <p class="muted" style="margin-top:16px">Throughout: a weekly churn review with the founders, one page of findings for engineering, sales and CS, and enterprise renewals as a standing agenda item.</p>
-  </div>
-</details>
-
-<details class="sec" id="s8">
-  <summary><span class="num">08</span><span class="t">Risks and trade-offs<small>The biggest risk: treating every cancel as a product failure.</small></span><span class="chev"></span></summary>
-  <div class="body">
-    <ul>
-      <li><b>Retaining the wrong users:</b> if one channel drives most churn, the fix is acquisition, not features.</li>
-      <li><b>Discount-led saves</b> only delay churn; tracked through the 90-day guardrail.</li>
-      <li><b>Living content is engineering-heavy:</b> start concierge-style; build once retention moves.</li>
-      <li><b>Small cohorts make data noisy:</b> pair every number with interviews.</li>
-      <li><b>Minute rollover can hurt margin:</b> model AI cost first.</li>
-      <li><b>Enterprise CS doesn't scale:</b> automate the health score and ROI digest first.</li>
-    </ul>
-    <div class="note"><b>What I wouldn't do:</b> ship more avatars and voices as a churn fix, force annual contracts on unhappy users, or hide the cancel button.</div>
-  </div>
-</details>
-
-<details class="sec" id="s9">
-  <summary><span class="num">09</span><span class="t">One-page summary<small>Root cause, evidence, fix and metric side by side.</small></span><span class="chev"></span></summary>
-  <div class="body">
-    <div class="tablewrap"><table>
-      <thead><tr><th>Priority</th><th>Root cause</th><th>Evidence</th><th>Solution</th><th>Metric</th></tr></thead>
-      <tbody>
-        <tr><td><span class="tag t1">1</span></td><td>One-off use</td><td>1–2 pieces then idle</td><td>Living content, templates, knowledge hub</td><td>Creating in 3 of first 8 weeks</td></tr>
-        <tr><td><span class="tag t1">2</span></td><td>Invisible ROI; single creator</td><td>1 of 3 editors active</td><td>ROI digest, analytics, invites, health score</td><td>Renewal rate, editors per workspace</td></tr>
-        <tr><td><span class="tag t1">3</span></td><td>AI rework</td><td>Long edit time</td><td>Guided first video, feedback loop</td><td>2nd piece in 14 days</td></tr>
-        <tr><td><span class="tag t2">Quick win</span></td><td>Failed payments</td><td>Unrecovered failures</td><td>Retries, card updater</td><td>% recovered</td></tr>
-        <tr><td><span class="tag t2">Quick win</span></td><td>No save options</td><td>"Pausing project" reasons</td><td>Pause, downgrade, top-up</td><td>Save rate</td></tr>
-        <tr><td><span class="tag tw">Watch</span></td><td>Packaging mismatch</td><td>Limit hits or low usage</td><td>Flexible minutes</td><td>Churn by utilisation</td></tr>
-        <tr><td><span class="tag tw">Watch</span></td><td>Wrong-fit acquisition</td><td>Fast-churning channels</td><td>Reallocate spend</td><td>Retention by channel</td></tr>
-      </tbody>
-    </table></div>
-  </div>
-</details>
-
-<details class="sec" id="s10">
-  <summary><span class="num">10</span><span class="t">Questions for the founders<small>What I'd want to know on day one.</small></span><span class="chev"></span></summary>
+  <summary><span class="num">07</span><span class="t">Questions for the founders<small>What I'd want to know on day one.</small></span><span class="chev"></span></summary>
   <div class="body">
     <ol>
-      <li>Where is churn concentrated today: self-serve logos, Scale downgrades or Enterprise renewals?</li>
-      <li>What share of churned accounts created only one or two pieces of content?</li>
-      <li>Do we see who views customers' content, and do retained accounts have more viewers?</li>
-      <li>Which acquisition channels produce the longest-lived customers?</li>
-      <li>What do customers say when they cancel, and is that captured anywhere today?</li>
+      <li>Where is churn highest today: self-serve customers, downgrades, or enterprise renewals?</li>
+      <li>What share of customers who left made only one or two videos?</li>
+      <li>Can we see who watches customers' videos, and do loyal customers get more views?</li>
+      <li>Which signup sources bring the longest-staying customers?</li>
+      <li>What do customers say when they cancel, and is it recorded anywhere?</li>
     </ol>
   </div>
 </details>
 
+<div class="end"></div>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p><b>Sources</b></p>
-    <ul>
-      <li><a href="https://www.trupeer.ai/announcement">Trupeer seed announcement</a></li>
-      <li><a href="https://tynmagazine.com/?p=223506">TYN Magazine: Trupeer raises $3M</a></li>
-      <li><a href="https://www.techjockey.com/ae/detail/trupeer">Trupeer plan details (Techjockey)</a></li>
-      <li><a href="https://trainn.co/blog/trupeer-pricing/">Trupeer pricing breakdown (Trainn)</a></li>
-    </ul>
-    <p>Prepared by Isha for the Founding Product Manager role. Independent assignment, not an official Trupeer page.</p>
-  </div>
-</footer>
 
 <script>
 (function(){
@@ -440,7 +374,10 @@ footer ul{padding-left:18px}
   function openHash(){
     var id = location.hash.slice(1);
     var el = id && document.getElementById(id);
-    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      requestAnimationFrame(function(){ el.scrollIntoView({behavior:'smooth', block:'start'}); });
+    }
   }
   window.addEventListener('hashchange', openHash);
   openHash();
